@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Story - Mystic Rides India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Mystic Rides India</h1>
+                <p>Discover Incredible India</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+				<li><a href="tracking.html">Track Visitors</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Create Blog Section -->
+    <section class="create-blog">
+        <h2>Share Your Travel Story</h2>
+        <div id="blogFormContainer">
+            <div class="blog-form">
+                <form id="blogForm">
+                    <div class="form-group">
+                        <label for="title">Blog Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter your blog title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="Where did you travel?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="cultural">Cultural</option>
+                            <option value="spiritual">Spiritual</option>
+                            <option value="food">Food & Cuisine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Your Story</label>
+                        <textarea id="content" name="content" placeholder="Share your travel experience..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload Images</label>
+                        <input type="file" id="image" name="image" accept="image/*" multiple>
+                        <div id="imagePreview"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">Publish Blog</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Bharat Yatra</h3>
+                <p>We are passionate travelers sharing our love for India's diverse culture, heritage, and natural beauty through stories and experiences.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+					<li><a href="tracking.html">Track Visitors</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Mumbai, India</p>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                <p><i class="fas fa-envelope"></i> contact@bharatyatra.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bharat Yatra. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                    <div id="loginEmailError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                    <div id="loginPasswordError" class="error-message"></div>
+                </div>
+                <div id="loginGeneralError" class="error-message"></div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                    <div id="signupNameError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                    <div id="signupEmailError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                    <div id="signupPasswordError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirm">Confirm Password</label>
+                    <input type="password" id="signupConfirm" required>
+                    <div id="signupConfirmError" class="error-message"></div>
+                </div>
+                <div id="signupGeneralError" class="error-message"></div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="loginLink">Login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
