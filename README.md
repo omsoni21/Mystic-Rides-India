@@ -55,6 +55,7 @@ JavaScript (Vanilla JS) – Interactivity & logic
 
 
 📂 Project Structure
+
 Mystic-Rides-India/
 │
 ├── index.html
@@ -76,6 +77,7 @@ Mystic-Rides-India/
 ├── himalaya.jpg
 │
 └── README.md
+
 
 🚀 How to Run Locally
 
