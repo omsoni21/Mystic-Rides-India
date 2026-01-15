@@ -52,8 +52,6 @@ JavaScript (Vanilla JS) – Interactivity & logic
 
 
 
-
-
 📂 Project Structure
 
 Mystic-Rides-India/
